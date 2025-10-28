@@ -1,0 +1,2 @@
+SET user:123:last_seen "2025-10-27 14:30"
+GET user:123:last_seen

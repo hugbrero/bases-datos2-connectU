@@ -1,0 +1,8 @@
+LPUSH user:123:recent_courses "Bases de Datos II"
+LPUSH user:123:recent_courses "IA Aplicada"
+LPUSH user:123:recent_courses "Redes"
+LPUSH user:123:recent_courses "Estadística"
+LPUSH user:123:recent_courses "Seguridad Informática"
+
+LTRIM user:123:recent_courses 0 4
+LRANGE user:123:recent_courses 0 4

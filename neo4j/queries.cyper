@@ -1,0 +1,12 @@
+// compañeros de grupo de Juan Pérez
+MATCH (juan:Estudiante {nombre: 'Juan Pérez'})-[:PERTENECE_A]->(g:GrupoDeEstudio)<-[:PERTENECE_A]-(compa:Estudiante)
+WHERE compa <> juan
+RETURN DISTINCT compa.nombre AS companeroDeGrupo;
+
+// cuántos recomiendan a Carlos García
+MATCH (e:Estudiante)-[:RECOMIENDA]->(p:Profesor {nombre: 'Carlos García'})
+RETURN COUNT(DISTINCT e) AS totalRecomendaciones;
+
+// grupos asociados a Bases de Datos II
+MATCH (g:GrupoDeEstudio)-[:ASOCIADO_A]->(c:Curso {nombre: 'Bases de Datos II'})
+RETURN DISTINCT g.nombre AS grupo;

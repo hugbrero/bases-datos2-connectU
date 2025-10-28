@@ -1,0 +1,5 @@
+ZADD top_groups 5 "BD2 - Sección B"
+ZADD top_groups 3 "IA Aplicada"
+ZADD top_groups 2 "Data Science"
+
+ZREVRANGE top_groups 0 2 WITHSCORES
